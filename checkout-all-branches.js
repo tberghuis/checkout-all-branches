@@ -46,7 +46,7 @@ branches.forEach(function(branch) {
   shell.mkdir("-p", `branches/${branch}`);
   shell.cd(`${repoParentDir}/branches/${branch}`);
   // allow () chars in branch name
-  shell.exec(`git clone --depth 1  --branch '${branch}' ${repoUrl} .`);
+  shell.exec(`git clone --depth 1  --branch ${branch} ${repoUrl} .`);
 });
 
 console.log("done");
